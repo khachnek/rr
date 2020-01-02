@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var Name = document.getElementById("fname").value;
+            var Password = document.getElementById("password").value;
+            var number = /^[0-9]+$/;
+            if(Password.length==0)
+            {
+                alert("password cannot be empty");
+                return false;
+            } else if(Name.length==0)
+            {
+                alert("Name cannot be empty");
+                return false;
+            } else if(Name.match(numbers))
+            {
+                alert("Name cannot be empty");
+                return false;
+            } else if(/^[a-zA-Z]*$/.test(Name)==false)
+            {
+                alert("Special character not allowed");
+                
+            }
+            else if(!(Name.length>=2 && Name.length<=30))
+            {
+                alert("Name length should be between 2 and 30 characters");
+                
+            }
+            else
+            {
+                alert("Details Submitted successfully");
+            
+            }
+        }
+            
+    </script>
+</head>
+
+<body>
+    <h1>Personal details</h1>
+    <form onsubmit="return validate();">
+        <p>Name:&emsp;
+        <input type=" text" id="fname" autocomplete="off"></p>
+        <p>Gender &emsp;<input type="radio" name="coding" id="" value="Male">Male
+        
+            <input type="radio" name="coding" id="" value="Female">Female</p>
+            
+            <p>Home Town
+                <select name="languages" id="">
+                    <option value="New delhi">New delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="hyderabad">Hyderabad</option>
+                </select>
+                </p>
+        
+                <p>Address
+                <textarea name="" id="" cols="55" rows="4"></textarea></p>
+                    
+        <p>Skills &emsp;
+            <input type="checkbox" name="programming" id="" value="java">Java
+            
+            <input type="checkbox" name="programming" id="" value="c">HTML
+            
+            <input type="checkbox" name="programming" id="" value="c++">Oracle</p>
+            <p>Password &emsp;
+        <input type="password"  id="Password"></p>
+        
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
